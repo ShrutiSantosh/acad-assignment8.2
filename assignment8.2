@@ -1,0 +1,32 @@
+# acad-assignment8.2
+
+package assignment8;
+
+import java.util.Scanner;
+
+public class NegativeAgeException {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Your Age");
+
+		int age = sc.nextInt();
+		if (age < 0)
+			try {
+				throw new NegativeException(age);
+			} catch (NegativeException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		else
+			System.out.println("Age entered is " + age);
+
+	}
+
+}
+
+output
+Enter Your Age
+-25
+Age cannot be negative -25
+	at assignment8.NegativeAgeException.main(NegativeAgeException.java:14)
