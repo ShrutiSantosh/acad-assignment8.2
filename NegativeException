@@ -1,0 +1,14 @@
+package assignment8;
+
+public class NegativeException extends Exception {
+	private int age;
+
+	public NegativeException(int age) {
+		this.age = age;
+	}
+
+	public String toString() {
+		return "Age cannot be negative" + " " + age;
+	}
+
+}
